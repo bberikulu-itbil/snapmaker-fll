@@ -34,8 +34,8 @@ python3 -m http.server 8000
 ## Логотиптер
 - media/SM-logo.svg — қою иконка
 - media/SM-logo-text.svg — қою мәтіндік
-- SM-logo-light.svg — жарық иконка
-- SM-logo-text-light.svg — жарық мәтіндік
+- media/SM-logo-light.svg — жарық иконка
+- media/SM-logo-text-light.svg — жарық мәтіндік
 - Header және бренд блокта жарық+қою нұсқалар бірге қолданылады.
 
 ## Лицензия
