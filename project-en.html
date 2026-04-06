@@ -33,23 +33,23 @@
     <section class="subhero">
       <div class="breadcrumb"><a href="index-en.html">Home</a> / Project</div>
       <p class="eyebrow">Innovation project</p>
-      <h1>OASIS — citizen water-quality monitoring</h1>
-      <p class="lede">Portable sensor + 3D-printed body + open data dashboard. Goal: make environmental measurements accessible to schools and clubs.</p>
+      <h1>OASIS — Optimal Artifact Storage Intelligence System</h1>
+      <p class="lede">Automates storage: monitors environment, detects risk, captures evidence with AI camera, acts instantly.</p>
       <div class="pill-group" style="margin-top:16px;">
-        <span class="pill">Temp · Turbidity · pH</span>
-        <span class="pill">UART · BLE</span>
-        <span class="pill">3D printed body</span>
+        <span class="pill">ESP32 · sensors</span>
+        <span class="pill">Raspberry Pi · AI</span>
+        <span class="pill">Camera · evidence</span>
       </div>
     </section>
 
     <section class="section split">
       <div>
-        <p class="eyebrow">Mechanics</p>
-        <h3>Modular enclosure</h3>
+        <p class="eyebrow">Sensors</p>
+        <h3>Full environment watch</h3>
         <ul class="dot-list">
-          <li>Sensor module swaps via magnetic mount.</li>
-          <li>PETG, water-resistant sealing.</li>
-          <li>LEGO axle adapter for robot mounting.</li>
+          <li>Temp/humidity (DHT22/BME280)</li>
+          <li>Light (GY-30), air quality (CCS811), gas (MQ-4)</li>
+          <li>If out of range — fan, mist, LED, buzzer trigger</li>
         </ul>
         <div class="resource-row">
           <a class="btn ghost" href="OASIS.glb" download>Download GLB</a>
@@ -63,21 +63,22 @@
 
     <section class="section split">
       <div class="panel">
-        <p class="eyebrow">Data flow</p>
-        <h3>Short pipeline</h3>
+        <p class="eyebrow">AI + data</p>
+        <h3>Raspberry Pi analytics</h3>
         <ul class="check-list">
-          <li><strong>UART → BLE:</strong> sensor packets go to BLE module.</li>
-          <li><strong>MQTT:</strong> mobile app pushes to broker, Grafana dashboard.</li>
-          <li><strong>Cache:</strong> offline logs to SD, resends when online.</li>
+          <li><strong>Photo/video:</strong> detects color change, dust, condensate</li>
+          <li><strong>Logs:</strong> incidents stored with timestamps</li>
+          <li><strong>Auto-action:</strong> alarm, actuators, documentation</li>
         </ul>
       </div>
       <div class="panel">
-        <p class="eyebrow">Judging story</p>
-        <h3>2-minute pitch</h3>
+        <p class="eyebrow">Thresholds</p>
+        <h3>Normal vs Risk</h3>
         <ul class="dot-list">
-          <li>Problem: lack of accessible water-quality labs at schools.</li>
-          <li>Solution: OASIS device + open data panel.</li>
-          <li>Impact: students collect data, form hypotheses, take action.</li>
+          <li>Temp 18–22°C (risk >28°C)</li>
+          <li>Humidity 45–55% (risk >70%)</li>
+          <li>Light <50 lux (risk >300 lux)</li>
+          <li>CO₂ <1000 ppm (risk >1500 ppm)</li>
         </ul>
       </div>
     </section>

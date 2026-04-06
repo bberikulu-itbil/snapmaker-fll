@@ -33,23 +33,23 @@
     <section class="subhero">
       <div class="breadcrumb"><a href="index-ru.html">Главная</a> / Проект</div>
       <p class="eyebrow">Инновационный проект</p>
-      <h1>OASIS — гражданский мониторинг качества воды</h1>
-      <p class="lede">Портативный датчик + 3D-печатный корпус + открытый дашборд. Цель — сделать эколаборатории доступными школам и клубам.</p>
+      <h1>OASIS — Optimal Artifact Storage Intelligence System</h1>
+      <p class="lede">Автоматически контролирует среду хранения артефактов, фиксирует риски, делает фото/видео доказательство и реагирует.</p>
       <div class="pill-group" style="margin-top:16px;">
-        <span class="pill">Темп · Мутность · pH</span>
-        <span class="pill">UART · BLE</span>
-        <span class="pill">3D-печатный корпус</span>
+        <span class="pill">ESP32 · сенсоры</span>
+        <span class="pill">Raspberry Pi · AI</span>
+        <span class="pill">Камера · доказательство</span>
       </div>
     </section>
 
     <section class="section split">
       <div>
-        <p class="eyebrow">Механика</p>
-        <h3>Модульный корпус</h3>
+        <p class="eyebrow">Сенсоры</p>
+        <h3>Полный контроль среды</h3>
         <ul class="dot-list">
-          <li>Сменные модули датчиков на магнитном креплении.</li>
-          <li>PETG, влагозащита.</li>
-          <li>Адаптер LEGO оси для крепления к роботу.</li>
+          <li>Темп/влажн (DHT22/BME280)</li>
+          <li>Свет (GY-30), air quality (CCS811), газ (MQ-4)</li>
+          <li>Если вне нормы — вентилятор, пульверизатор, LED, буззер</li>
         </ul>
         <div class="resource-row">
           <a class="btn ghost" href="OASIS.glb" download>Скачать GLB</a>
@@ -63,21 +63,22 @@
 
     <section class="section split">
       <div class="panel">
-        <p class="eyebrow">Поток данных</p>
-        <h3>Короткий pipeline</h3>
+        <p class="eyebrow">AI + данные</p>
+        <h3>Аналитика на Raspberry Pi</h3>
         <ul class="check-list">
-          <li><strong>UART → BLE:</strong> пакеты датчика уходят в BLE-модуль.</li>
-          <li><strong>MQTT:</strong> мобильное приложение пушит в брокер, Grafana.</li>
-          <li><strong>Кэш:</strong> офлайн запись на SD, пересылка при соединении.</li>
+          <li><strong>Фото/видео:</strong> фиксирует цвет, пыль, конденсат</li>
+          <li><strong>Логи:</strong> инциденты с метками времени</li>
+          <li><strong>Авто-действие:</strong> сигнал, привод, документирование</li>
         </ul>
       </div>
       <div class="panel">
-        <p class="eyebrow">Питч</p>
-        <h3>2 минуты</h3>
+        <p class="eyebrow">Пороги</p>
+        <h3>Норма vs риск</h3>
         <ul class="dot-list">
-          <li>Проблема: недоступные лаборатории качества воды в школах.</li>
-          <li>Решение: устройство OASIS + открытый дашборд.</li>
-          <li>Эффект: ученики собирают данные, строят гипотезы, действуют.</li>
+          <li>Темп 18–22°C (риск >28°C)</li>
+          <li>Влажн 45–55% (риск >70%)</li>
+          <li>Свет <50 lux (риск >300 lux)</li>
+          <li>CO₂ <1000 ppm (риск >1500 ppm)</li>
         </ul>
       </div>
     </section>
